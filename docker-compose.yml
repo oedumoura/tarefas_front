@@ -1,0 +1,10 @@
+services:
+  frontend:
+    build:
+      context: .  # Usa o diretório atual em vez de ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"
+    volumes:
+      - .:/app
+      - /app/node_modules
